@@ -1,7 +1,7 @@
 <template>
-  <v-main>
-    <h2>Login de Usuario</h2>
-
+  <v-nav>
+    <h1>Usuarios View</h1>
+    <h2>Registro de Usuario</h2>
     <v-form ref="form" v-model="valid" lazy-validation>
       <v-text-field v-model="email" :rules="emailRules" label="E-mail" required></v-text-field>
       <v-text-field
@@ -16,14 +16,13 @@
         @click:append="show1 = !show1"
       ></v-text-field>
 
-      <v-btn :disabled="!valid" color="success" class="mr-4" @click="validate"> Ingresar </v-btn>
+      <v-btn :disabled="!valid" color="success" class="mr-4" @click="validate"> Registrar </v-btn>
+
       <v-btn color="error" class="mr-4" @click="reset"> Limpiar Formulario </v-btn>
+
       <v-btn color="warning" @click="resetValidation"> Limpiar Validation </v-btn>
-      <router-link to="/UsersView" class="ml-4">
-        <v-btn color="info">Registrarse</v-btn>
-      </router-link>
     </v-form>
-  </v-main>
+  </v-nav>
 </template>
 
 <script>
